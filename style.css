@@ -7,7 +7,7 @@
 
 header {
     width: 100vw;
-    background: url('/imagens/Fundo-hero\ 02.png') no-repeat;
+    background: url('imagens/Fundo-hero\ 02.png') no-repeat;
     image-rendering: auto;
     background-size: cover;
     background-position: bottom;
@@ -21,6 +21,7 @@ nav {
     align-items: center;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 nav img {
@@ -32,25 +33,43 @@ nav ul {
     width: 50%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     list-style-type: none;
 }
 
+nav ul li:hover {
+    
+    border-bottom: solid 1px tomato;
+    transform: scale(1.2) translate(1.2px, 1.2px);
+    transition: all 0.5s ease-in-out;
+    padding: 1px;
+}
+
 nav ul li a {
-    color: aliceblue;
+    color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 nav button {
     background: none;
-    color: aliceblue;
+    color: white;
     padding: 8px 20px;
-    border-color: aliceblue;
+    border-color: white;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
 }
 
+nav button:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease-in-out;
+    color: blue;
+}
 
+/* hero */
 .hero {
     width: 100%;
     height: 100%;
@@ -58,24 +77,41 @@ nav button {
 }
 
 h1 {
+
+    width: 1000px;
+    margin-top: 60px;
     font-size: 60px;
     color: aliceblue;
 }
 
 .hero p {
+
+    width: 900px;
+    margin-top: 10px;
     color: aliceblue;
     padding: 20px 0;
 }
 
 .hero button {
+    margin-top: 10px;
     background: rgba(14, 14, 195, 0.651);
-    width: 300px;
+    width: 150px;
     height: 40px;
-    color: aliceblue;
+    color:white;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    border: solid 1px white;
 }
 
+.hero button:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+/* main */
 main {
     width: 100% ;
 }
@@ -84,6 +120,7 @@ main {
     height: 1200px;
 }
 
+/* txtTituloCards */
 .txtTituloCards{
     text-align: center;
 }
@@ -98,6 +135,7 @@ main {
     font-size: 40px;
 }
 
+/* conteinerCards */
 .conteinerCards {
     display: flex;
     justify-content: center;
@@ -106,7 +144,7 @@ main {
 }
 
 .card {
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
     width: 300px;
     height: 380px;
@@ -116,6 +154,11 @@ main {
     align-items: center;
     padding-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.card:hover{
+    transform: scale(1.09);
+    transition: all 0.5s ease-in-out;
 }
 
 .card img {
@@ -140,6 +183,11 @@ main {
     cursor: pointer;
 }
 
+.card button:hover{
+    background: rgba(0, 72, 255, 0.9);
+    transition: all 0.5s ease-in-out;
+    
+}
 /* sessaoVideo */
 
 #sessaoVideo {
@@ -180,13 +228,19 @@ main {
 
 
 #sessaoVideo .caixa button {
-    background: blue;
+    background: rgba(0, 72, 255, 0.671);
     color: white;
-    border-radius: 20px;
+    border-radius: 30px;
     border: none;
     cursor: pointer;
     width: 150px;
     padding: 10px;
+    font-size: 20px;
+}
+
+#sessaoVideo .caixa button:hover {
+    background: rgba(0, 0, 255, 0.8);
+    transition: all 0.5s ease-in-out;
 }
 
 /* sessaoPlane */
@@ -195,6 +249,7 @@ main {
     height: 800px;
     margin-top: 50px;
     position: relative;
+
 }
 
 #fundoPlane {
@@ -218,7 +273,7 @@ main {
     overflow: hidden;
 
     #plane {
-        transform: translate(2000px, -800px) scale(2) ;
+        transform: translate(2000px, -800px) scale(1.5);     
     }
 
 }
